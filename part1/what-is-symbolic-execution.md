@@ -5,10 +5,8 @@
 
                     var a 
                       |
-                      |
                       V
                     foo(a)
-                      |
                       |
                       V
                   if(a == 0)
