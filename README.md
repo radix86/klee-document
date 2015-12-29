@@ -5,11 +5,11 @@ KLEE 文档
 
 附录中是一些有帮助的论文列表。
 
-# Summary
+## 目录
 
-* [Part I](part1/README.md)
-    * [Writing is nice](part1/writing.md)
-    * [GitBook is nice](part1/gitbook.md)
+* 第一部分 基本知识
+    * [什么是符号执行](part1/writing.md)
+    * [什么是KLEE](part1/gitbook.md)
 * [Part II](part2/README.md)
     * [We love feedback](part2/feedback_please.md)
     * [Better tools for authors](part2/better_tools.md)
