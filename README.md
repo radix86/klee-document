@@ -1,4 +1,6 @@
-My Awesome Book
+KLEE 文档
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+这是华东师范大学计算机科学与软件工程学院分析与验证实验室针对KLEE的一份研究文档，主要记录在对KLEE进行研究和改进的过程中积累下来的一些心得和体会。
+
+附录中是一些有帮助的论文列表。
