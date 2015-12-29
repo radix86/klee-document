@@ -7,9 +7,6 @@ KLEE 文档
 
 ## 目录
 
-* 第一部分 基本知识
+* ####第一部分 基本知识
     * [什么是符号执行](part1/what-is-symbolic-execution.md)
     * [什么是KLEE](part1/gitbook.md)
-* [Part II](part2/README.md)
-    * [We love feedback](part2/feedback_please.md)
-    * [Better tools for authors](part2/better_tools.md)
