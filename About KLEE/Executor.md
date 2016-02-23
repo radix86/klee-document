@@ -26,4 +26,4 @@ stepInstruction(state);
 executeInstruction(state, ki);
 processTimers(&state, MaxInstructionTime);
 ```
-这一段的意思大概是，看看是否还有没有执行的`states`，如果有，那根据不同的[Searcher](Searcher)找到下一个需要执行的`states`
+这一段的意思大概是，看看是否还有没有执行的`states`，如果有，那根据不同的[Searcher](Searcher.md)找到下一个需要执行的`states`，接下来，它会存储将要执行的语句(`KInstruction *ki = state.pc;`)以及下一条准备执行的语句，然后我们执行刚才存储的语句。
