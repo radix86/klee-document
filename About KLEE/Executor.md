@@ -36,4 +36,4 @@ processTimers(&state, MaxInstructionTime);
   ++state.pc;
 ```
 就是将`states.pc`移到下一条`Instruction`上去。
-
+`executeInstruction(state, ki);`是根据不同的`Instruction`进行不同的符号执行，比如说，如果是`if`语句的话，就拆分成两个`states`。
