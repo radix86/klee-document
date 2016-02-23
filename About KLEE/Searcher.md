@@ -13,7 +13,7 @@ KLEE 搜索器 (Searcher)
 `IterativeDeepeningTimeSearcher`
 `InterleavedSearcher`
 
-`Searcher`父类之中，比较关键的是三个函数
+`Searcher`父类之中，比较关键的是两个个函数
 ```
 virtual ExecutionState &selectState() = 0;
 
