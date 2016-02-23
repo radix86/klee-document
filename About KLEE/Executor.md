@@ -1,3 +1,17 @@
 [返回主页](../README.md)
 KLEE 执行器 (Executor)
 =========================
+Executor是KLEE执行的入口，我们可以在`klee/lib/Core/Executor.cpp`中找到它的实现。
+
+`void Executor::runFunctionAsMain(Function *f,int argc,char **argv,char **envp)` 这个函数可以看做是整个KLEE的入口，这个函数里面对KLEE的执行做了一些准备工作。
+
+我们可以看这一段代码：
+```
+ processTree = new PTree(state);
+ state->ptreeNode = processTree->root;
+ run(*state);
+ delete processTree;
+ processTree = 0;
+```
+这一段函数中，首先它初始化了`processTree`，然后执行符号执行的过程，最后删除了`processTree`。
+我们可以看到，最核心的一段代码就是在`run(*state)`这个函数中。
