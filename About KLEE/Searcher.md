@@ -20,5 +20,4 @@ virtual ExecutionState &selectState() = 0;
 virtual void update(ExecutionState *current,
                     const std::set<ExecutionState*> &addedStates,
                     const std::set<ExecutionState*> &removedStates) = 0;
-virtual bool empty() = 0;
 ```
