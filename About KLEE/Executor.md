@@ -15,3 +15,14 @@ Executor是KLEE执行的入口，我们可以在`klee/lib/Core/Executor.cpp`中�
 ```
 这一段函数中，首先它初始化了`processTree`，然后执行符号执行的过程，最后删除了`processTree`。
 我们可以看到，最核心的一段代码就是在`run(*state)`这个函数中。
+
+我们看一下`void Executor::run(ExecutionState &initialState)`这个函数比较关键的一段是
+```
+while (!states.empty() && !haltExecution) {
+ExecutionState &state = searcher->selectState();
+KInstruction *ki = state.pc;
+stepInstruction(state);
+
+executeInstruction(state, ki);
+processTimers(&state, MaxInstructionTime);
+```
