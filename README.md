@@ -9,7 +9,7 @@ KLEE 文档
 
 * ####第一部分 基本知识
     * [什么是符号执行](Basic/what-is-symbolic-execution.md)
-    * [什么是KLEE](part1/what-is-klee.md)
+    * [什么是KLEE](Basic/what-is-klee.md)
 
 * ####第二部分 KLEE相关内容
     * [Executor](About KLEE/Executor.md)
