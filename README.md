@@ -8,7 +8,7 @@ KLEE 文档
 ## 目录
 
 * ####第一部分 基本知识
-    * [什么是符号执行](part1/what-is-symbolic-execution.md)
+    * [什么是符号执行](Basic/what-is-symbolic-execution.md)
     * [什么是KLEE](part1/what-is-klee.md)
 
 * ####第二部分 KLEE相关内容
