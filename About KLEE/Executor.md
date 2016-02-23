@@ -38,4 +38,4 @@ processTimers(&state, MaxInstructionTime);
 就是将`states.pc`移到下一条`Instruction`上去。
 `executeInstruction(state, ki);`是根据不同的`Instruction`进行不同的符号执行，比如说，如果是`if`语句的话，就拆分成两个`state`。
 
-
+而在`updateStates(&state);`中，会调用Searcher的Update函数，去更新`states`列表，保证在`executeInstruction(state, ki);`过程中生成的新`state`能够及时的加入`states`列表。
