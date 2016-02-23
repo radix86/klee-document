@@ -1,21 +1,4 @@
 [返回主页](../README.md)
-KLEE 执行器 (Executor)
+KLEE 搜索器 (Searcher)
 =========================
-Executor是KLEE执行的入口，我们可以在`klee/lib/Core/Executor.cpp`中找到它的实现。
-
-`void Executor::runFunctionAsMain(Function *f,int argc,char **argv,char **envp)` 这个函数可以看做是整个KLEE的入口，这个函数里面对KLEE的执行做了一些准备工作。
-
-我们可以看这一段代码：
-```
- processTree = new PTree(state);
- state->ptreeNode = processTree->root;
- run(*state);
- delete processTree;
- processTree = 0;
-```
-这一段函数中，首先它初始化了`processTree`，然后执行符号执行的过程，最后删除了`processTree`。
-我们可以看到，最核心的一段代码就是在`run(*state)`这个函数中。
-
-
-我们看一下`void Executor::run(ExecutionState &initialState)`这个函数比较关键的一段是
-```
+`Searcher` 是KLEE搜索算法的父类
