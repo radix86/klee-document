@@ -21,4 +21,4 @@ virtual void update(ExecutionState *current,
                     const std::set<ExecutionState*> &addedStates,
                     const std::set<ExecutionState*> &removedStates) = 0;
 ```
-`selectState()`函数是`Searcher`核心的算法，主要是用来确定如何选择下一个`state`从而满足一个搜索策略。
+`selectState()`函数是`Searcher`核心的算法，主要是根据搜索策略来选择下一个`state`。
