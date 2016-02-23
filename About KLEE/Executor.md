@@ -26,4 +26,4 @@ stepInstruction(state);
 executeInstruction(state, ki);
 processTimers(&state, MaxInstructionTime);
 ```
-这一段的意思大概是，看看是否还有没有执行的`states`，如果有，那根据不同的Searcher找到下一个需要执行的`states`
+这一段的意思大概是，看看是否还有没有执行的`states`，如果有，那根据不同的[Searcher](Searcher)找到下一个需要执行的`states`
