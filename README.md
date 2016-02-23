@@ -12,7 +12,7 @@ KLEE 文档
     * [什么是KLEE](Basic/what-is-klee.md)
 
 * ####第二部分 KLEE相关内容
-    * [Executor](About KLEE/Executor.md)
+    * [KLEE 执行器](About KLEE/Executor.md)
     * [Searcher](About KLEE/Searcher.md)
     * [InstructionInfo](About KLEE/InstructionInfo.md)
     * [SpecialFunctionHandler](About KLEE/SpecialFunctionHandler.md)
