@@ -58,3 +58,4 @@ InstructionInfo 是 KLEE对LLVM Instruction的封装之后获得的信息，我�
 
 }
 ```
+在`getInstructionDebugInfo()`这个函数中`InstructionInfoTable`根据`Instruction`获取`Instruction`的debug信息，比如所在文件，行号等。
