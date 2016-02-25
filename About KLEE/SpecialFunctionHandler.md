@@ -23,3 +23,4 @@ KLEE 插桩函数 (SpecialFunctionHandler)
 -------
 ###新增一个插桩函数
 
+在`klee/lib/Core/SpecialFunctionHandler.h`中，增加一个`HANDLER(handleMakeSymbolic);`参数对应的是插桩函数控制器的名字，`HANDLER(handleMakeSymbolic);`相当于声明了一个插桩函数控制器
