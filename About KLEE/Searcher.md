@@ -23,3 +23,7 @@ virtual void update(ExecutionState *current,
 ```
 `selectState()`函数是`Searcher`核心的算法，主要是根据搜索策略来选择下一个`state`。
 `update()`函数是在一个`Instruction`执行完之后，更新`states`列表，将新产生的`state`加入到`states`列表中。在`Executor`中的`updateStates(&state);`函数会用到。
+
+---------
+###新增Searcher
+在Searcher.h中新建一个类。
