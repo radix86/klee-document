@@ -25,36 +25,3 @@ InstructionInfo 是 KLEE对LLVM Instruction的封装之后获得的信息，我�
   };
 ```
 我们可以看出，在`InstructionInfo`之中，存储了`Instruction`的`id`、所在的文件路径、所在文件的行号，最后还有在LLVM IR中的行号。
-
-下面我们再来看一下`InstructionInfoTable`
-```
-  class InstructionInfoTable {
-    struct ltstr { 
-      bool operator()(const std::string *a, const std::string *b) const {
-        return *a<*b;
-      }
-    };
-
-    std::string dummyString;
-    InstructionInfo dummyInfo;
-    std::map<const llvm::Instruction*, InstructionInfo> infos;
-    std::set<const std::string *, ltstr> internedStrings;
-
-  private:
-    const std::string *internString(std::string s);
-    bool getInstructionDebugInfo(const llvm::Instruction *I,
-                                 const std::string *&File,
-								 unsigned &Line,
-								 unsigned &Column);
-
-  public:
-    InstructionInfoTable(llvm::Module *m);
-    ~InstructionInfoTable();
-
-    unsigned getMaxID() const;
-    const InstructionInfo &getInfo(const llvm::Instruction*) const;
-    const InstructionInfo &getFunctionInfo(const llvm::Function*) const;
-  };
-
-}
-```
