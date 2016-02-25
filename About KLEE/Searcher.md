@@ -26,4 +26,4 @@ virtual void update(ExecutionState *current,
 
 ---------
 ###新增Searcher
-在Searcher.h中新建一个类。
+在`klee/lib/Core/Searcher.cpp`中新建一个类。
