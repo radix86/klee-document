@@ -17,3 +17,5 @@ KLEE 插桩函数 (SpecialFunctionHandler)
   add("klee_make_symbolic", handleMakeSymbolic, false),
 ```
 类似这样的定义，就是在声明插桩函数，比如说`klee_make_symbolic`这个函数，就是通过` add("klee_make_symbolic", handleMakeSymbolic, false)`这一句语句将`handleMakeSymbolic`控制器与`klee_make_symbolic`插桩函数绑定在了一起。
+
+比如，当KLEE符号执行到插入到被测代码中的插桩函数`klee_make_symbolic()`时，便会执行`void SpecialFunctionHandler::handleMakeSymbolic(ExecutionState &state,KInstruction *target,std::vector<ref<Expr> > &arguments)`这个函数里面的内容，其中`arguments`可以获取到传入插桩函数里面的参数，`state`可以获取到执行到该函数时的`state`,`target`可以获取到该函数所在的`KInstruction`。
