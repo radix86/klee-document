@@ -44,8 +44,7 @@ InstructionInfo (对LLVM Instruction的信息）
     const std::string *internString(std::string s);
     bool getInstructionDebugInfo(const llvm::Instruction *I,
                                  const std::string *&File,
-								 unsigned &Line,
-								 unsigned &Column);
+								 unsigned &Line);
 
   public:
     InstructionInfoTable(llvm::Module *m);
