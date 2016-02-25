@@ -26,4 +26,4 @@ virtual void update(ExecutionState *current,
 
 ---------
 ###新增Searcher
-在`klee/lib/Core/Searcher.cpp`中新建一个类继承`Searcher`类，在`klee/lib/Core/Searcher.cpp`中重写`Searcher`类的成员函数即可。
+在`klee/lib/Core/Searcher.h`中新建一个类继承`Searcher`类，在`klee/lib/Core/Searcher.cpp`中重写`Searcher`类的成员函数即可。
