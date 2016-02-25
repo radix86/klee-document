@@ -9,7 +9,6 @@ InstructionInfo 是 KLEE对LLVM Instruction的封装之后获得的信息，我�
     unsigned id;
     const std::string &file;
     unsigned line;
-    unsigned Column;
     unsigned assemblyLine;
 
   public:
@@ -21,8 +20,8 @@ InstructionInfo 是 KLEE对LLVM Instruction的封装之后获得的信息，我�
       : id(_id), 
         file(_file),
         line(_line),
-		Column(_Column),
         assemblyLine(_assemblyLine) {
     }
   };
 ```
+我们可以看出，在`InstructionInfo`之中，存储了`Instruction`的`id`、所在的文件路径、所在文件的行号，最后还有在LLVM IR中的行号。
