@@ -15,6 +15,6 @@ KLEE 文档
     * [KLEE 执行器](About KLEE/Executor.md)
     * [KLEE 搜索器](About KLEE/Searcher.md)
     * [InstructionInfo](About KLEE/InstructionInfo.md)
-    * [SpecialFunctionHandler](About KLEE/SpecialFunctionHandler.md)
+    * [KLEE 插桩函数](About KLEE/SpecialFunctionHandler.md)
     
 * ####第三部分 基于符号执行的数据流测试框架的实现相关内容
