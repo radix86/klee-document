@@ -2,13 +2,8 @@
 KLEE 插桩函数 (SpecialFunctionHandler)
 =========================
 `SpecialFunctionHandler` 是KLEE 中插桩函数，我们可以在`klee/lib/Core/SpecialFunctionHandler.cpp`中找到它的实现。
+在这个文件中
 ```
-#define add(name, handler, ret) { name, \
-                                  &SpecialFunctionHandler::handler, \
-                                  false, ret, false }
-#define addDNR(name, handler) { name, \
-                                &SpecialFunctionHandler::handler, \
-                                true, false, false }
   addDNR("__assert_rtn", handleAssertFail),
   addDNR("__assert_fail", handleAssertFail),
   addDNR("_assert", handleAssert),
