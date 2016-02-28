@@ -27,4 +27,5 @@ KLEE 插桩函数 (SpecialFunctionHandler)
 
 在`klee/lib/Core/SpecialFunctionHandler.cpp`中，类比`void SpecialFunctionHandler::handleMakeSymbolic(ExecutionState &state,KInstruction *target,std::vector<ref<Expr> > &arguments)`实现该控制器，并通过`add("klee_make_symbolic", handleMakeSymbolic, false),`绑定函数名与控制器，在`klee/include/klee/klee.h`中声明插桩函数，便可以在被测代码中使用插桩函数。
 
-未解决的问题：使用时无实际问题，但会出现`KLEE: WARNING: undefined reference to function: xxxxx`，暂不知道原因，但不影响使用。
+未解决的问题（已解决）：使用时无实际问题，但会出现`KLEE: WARNING: undefined reference to function: xxxxx`，暂不知道原因，但不影响使用。
+解决方案：在`klee/tools/klee/main.cpp`中的`*modelledExternals[]`中添加进插桩函数名即可
