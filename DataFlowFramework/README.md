@@ -19,3 +19,6 @@
 将KLEE执行器以及cil-info文件地址传进去。
 
 3、在`klee/lib/Core/Searcher.h`中继承`Searcher`父类，声明一个新的子类`DataFlowSearcher`，在`klee/lib/Core/Searcher.cpp`中实现`DataFlowSearcher`。目前先实现一个简单的DFS。
+
+4、在`klee/include/klee/Internal/Module/`中新建一个`CilInfoTable.h`，再在`klee/lib/Module/`中新建一个`CilInfoTable.cpp`。
+
