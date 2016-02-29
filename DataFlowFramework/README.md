@@ -18,4 +18,4 @@
 ```
 将KLEE执行器以及cil-info文件地址传进去。
 
-3、在`klee/lib/Core/Searcher.h`中继承`Searcher`父类，声明一个新的子类`DataFlowSearcher`
+3、在`klee/lib/Core/Searcher.h`中继承`Searcher`父类，声明一个新的子类`DataFlowSearcher`，在`klee/lib/Core/Searcher.cpp`中实现`DataFlowSearcher`。目前先实现一个简单的DFS。
