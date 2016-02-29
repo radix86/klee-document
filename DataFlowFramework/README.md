@@ -7,4 +7,4 @@
   UseDataFlow("use-data-flow-with",
   	  	   cl::desc("Use data flow search with file contents cil def-use info"));
 ```
-之后便可以使用`-use-data-flow-with=cil-info-file-adress`来激活数据流测试模式并确定cil信息文件。
+之后便可以使用`-use-data-flow-with=cil-info-file-adress`来激活数据流测试模式并确定cil信息文件位置。
