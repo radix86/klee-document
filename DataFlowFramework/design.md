@@ -67,7 +67,7 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
         如果所有Def-Use pair已被覆盖
             跳出该循环
         否则
-            继续循环
+            继续执行
     如果超时
         跳出该循环
 
