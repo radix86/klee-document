@@ -48,4 +48,21 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 4、优化Cut-point guided search方法
 
-因为对于多个Def-Use pair多次执行KLEE会造成资源的浪费，重复执行一些公有的路径，所以我考虑了一个优化的Searcher算法。
+因为对于多个Def-Use pair多次执行KLEE会造成资源的浪费，重复执行一些公有的路径，所以我考虑了一个优化的Searcher算法：
+```
+如果目标Def-Use pair未被覆盖
+    执行BFS算法
+    如果遇到Cut-point插桩函数
+        则清空State列表中除了该Cut-point所在state以外的全部state。
+        继续执行循环
+    如果遇到该Def-Use pair的Definition插桩函数
+        则更新该Def-Use pair的状态为到达定义
+    如果遇到该Def-Use pair的重定义
+        则更新该Def-Use pair的状态为未到达定义
+    如果遇到该Def-Use pari的Use插桩函数且Def-Use pair状态为到达定义
+        则更新该Def-Use pair的状态为已被覆盖
+        跳出该循环
+    如果超时
+        跳出该循环
+
+```
