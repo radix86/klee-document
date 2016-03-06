@@ -39,5 +39,6 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
         则更新该Def-Use pair的状态为未到达定义
     如果遇到该Def-Use pari的Use插桩函数且Def-Use pair状态为到达定义
         则更新该Def-Use pair的状态为已被覆盖
+        跳出该循环
 
 ```
