@@ -25,3 +25,8 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 3、实现Cut-point guided search方法
 
 要实现Cut-point guided search方法，首先要在Definition和Use中维护一个Cut-points数据结构。Cut-points数据结构是cut-point数据结构的一个列表，在cut-point数据结构中，我们将会存储标识该cut-point的信息以及是否到达的状态，在符号执行遇到对应的插桩函数时，表明这个cut-point已到达。
+
+之后新增一个KLEE的Searcher，该Searcher的算法为：
+```
+
+```
