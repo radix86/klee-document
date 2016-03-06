@@ -21,3 +21,5 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 ```
 在KLEE内新增一个维护Def-Use pair的数据结构，在遇到插桩函数的时候，便更新表的状态。新增的数据结构包括，Definition、Use，这两个数据结构存储Cil文件中的信息，并且可以判断与其他对象是否相等。Def-Use pair除了包含一个Definition和一个Use之外，还包含了这个Def-Use pair的三个状态：未到达定义、到达定义、已被覆盖。最后CilInfoTable数据结构维护一个Def-Use pair的列表，作为程序最终的输出结果之一，并统计覆盖率。
+
+；3、实现Cut-point guided search方法
