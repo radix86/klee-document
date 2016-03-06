@@ -24,4 +24,4 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 3、实现Cut-point guided search方法
 
-要实现Cut-point guided search方法，首先要在Definition和Use中维护一个Cut-point数据结构。
+要实现Cut-point guided search方法，首先要在Definition和Use中维护一个Cut-points数据结构。
