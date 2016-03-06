@@ -28,5 +28,7 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 之后新增一个KLEE的Searcher，该Searcher的算法为：
 ```
+基础算法为BFS算法
 
+如果遇到Cut-point插桩函数
 ```
