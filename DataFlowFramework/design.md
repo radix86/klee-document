@@ -41,3 +41,4 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
         则更新该Def-Use pair的状态为已被覆盖
         跳出该循环
 ```
+在KLEE初始化时让KLEE多次执行，每次目标是一对Def-Use pair
