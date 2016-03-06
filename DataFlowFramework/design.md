@@ -32,8 +32,8 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
     执行BFS算法
     如果遇到Cut-point插桩函数
         则清空State列表中除了该Cut-point所在state以外的全部state。
-        继续循环
+        继续执行循环
     如果遇到该Def-Use pair的Definition插桩函数
-        
+        则
 
 ```
