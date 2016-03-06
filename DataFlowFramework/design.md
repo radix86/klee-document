@@ -53,9 +53,10 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 如果CilInfoTable中存在未被覆盖的Def-Use pair
     执行BFS算法
     如果遇到Cut-point插桩函数
-        则暂停该Cut-point所在state的执行
-        则清空State列表中除了该Cut-point所在state以外的全部state。
-        继续执行循环
+        则暂停该Cut-point所在state的执行，继续执行其他state。
+        直到列表中所有Def-Use pair的第n（初始值为1）个Cut-point均被到达或超时
+            n++
+            则清空State列表中除了这些Cut-point所在state以外的全部state。
     如果遇到该Def-Use pair的Definition插桩函数
         则更新该Def-Use pair的状态为到达定义
     如果遇到该Def-Use pair的重定义
