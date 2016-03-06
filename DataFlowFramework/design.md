@@ -48,4 +48,4 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 4、优化Cut-point guided search方法
 
-因为对于多个Def-Use pair多次执行KLEE会造成资源的浪费，重复执行一些公有的路径
+因为对于多个Def-Use pair多次执行KLEE会造成资源的浪费，重复执行一些公有的路径，所以我考虑了一个优化的Searcher算法。
