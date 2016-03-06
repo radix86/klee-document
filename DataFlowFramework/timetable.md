@@ -2,4 +2,13 @@
 时间计划
 =========================
 目前已实现设计计划中的1、2部分，已经可以在BFS算法的情况下，统计Def-Use pair的覆盖率。
-下一步准备用半个月的时间完成Cut-Point guied
+下一步准备用半个月的时间完成Cut-point guided search方法的第一个基础版本，如果有时间将会尝试更加优化的复杂版本。
+
+大致的时间节点如下：
+
+3月13日前完成Cut-point guided search方法
+
+3月17日前进行Cut-point guided search方法的调试，包括一些复杂情况，如：不可达、重定义。
+
+3月24日前进行Cut-point guided search方法的优化开发，以及代码的重构。
+
