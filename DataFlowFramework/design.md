@@ -13,6 +13,11 @@
 
 再上一个模块中，我们使用KLEE读取了Cil的信息文件，Cil信息文件大致包含以下一些信息：
 ```
+dua_id, dua_kind;
+def_var_name, def_var_id, def_var_line, def_file_name, def_func_name, def_func_id, def_stmt_id; 
+use_var_name, use_var_id, use_var_line, use_file_name, use_func_name, use_func_id, use_stmt_id;
+
+dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 ```
 在KLEE内新增一个数据流表的数据结构，
