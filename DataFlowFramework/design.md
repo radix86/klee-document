@@ -28,7 +28,7 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 之后新增一个KLEE的Searcher，该Searcher的算法为：
 ```
-如果CilInfoTable中存在未被覆盖
+如果目标Def-Use pair未被覆盖
     执行BFS算法
     如果遇到Cut-point插桩函数
         则清空State列表中除了该Cut-point所在state以外的全部state。
@@ -50,7 +50,8 @@ dua_kind: 0 c-use , 1 p-true, 2 p-false
 
 因为对于多个Def-Use pair多次执行KLEE会造成资源的浪费，重复执行一些公有的路径，所以我考虑了一个优化的Searcher算法：
 ```
-如果目标Def-Use pair未被覆盖
+
+如果CilInfoTable中存在未被覆盖的
     执行BFS算法
     如果遇到Cut-point插桩函数
         则清空State列表中除了该Cut-point所在state以外的全部state。
